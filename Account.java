@@ -32,20 +32,21 @@ public class Account {
 
     public int debit(int amount) {
         if(amount <= balance) {
-            return balance - amount;
+            balance = balance - amount;
         } else {
             System.out.println("amount exceeded");
-            return balance;
         }
+        return balance;
     }
 
     public  int transferTo(Account another, int amount) {
         if(amount <= balance) {
-            return balance - amount;
+            another.balance += amount;
+            balance = balance - amount;
         } else {
             System.out.println("amount exceeded");
-            return balance;
         }
+        return balance;
     }
 
     public String toString() {
