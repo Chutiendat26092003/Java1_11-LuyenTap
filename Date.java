@@ -67,14 +67,14 @@ public class Date {
         } else {
             zero = "" + day;
         }
-        zero = zero + ":";
+        zero = zero + "/";
         if (month < 10)
         {
             zero = zero + "0" + month;
         } else {
             zero = zero + month;
         }
-        zero = zero + ":" + year;
-        return "Date[dd:mm:yyyy - " + zero + "]";
+        zero = zero + "/" + year;
+        return "Date[dd/mm/yyyy - " + zero + "]";
     }
 }
